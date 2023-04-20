@@ -1,0 +1,11 @@
+Model Information:
+* title:	AstroDoggo
+* source:	https://sketchfab.com/3d-models/astrodoggo-e32aa68b601a4917a7389f2208ccd957
+* author:	merrychuu (https://sketchfab.com/merrynguyen)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "AstroDoggo" (https://sketchfab.com/3d-models/astrodoggo-e32aa68b601a4917a7389f2208ccd957) by merrychuu (https://sketchfab.com/merrynguyen) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
