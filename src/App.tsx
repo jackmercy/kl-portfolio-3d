@@ -1,6 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
 import Bonus from './components/Bonus';
+import { Analytics } from '@vercel/analytics/react';
 function App() {
 
   return (
@@ -22,8 +23,9 @@ function App() {
           <StarsCanvas />
           <Bonus />
         </div>
-        
+
       </div>
+      <Analytics />
     </BrowserRouter>
   )
 }
