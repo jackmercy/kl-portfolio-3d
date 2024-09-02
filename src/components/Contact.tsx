@@ -29,6 +29,10 @@ const Contact = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
+    if (formState.name === '' || formState.email === '' || formState.msg === '') {
+      alert('Please fill in all fields!');
+      return;
+    }
     setLoading(true);
     try {
       await emailjs.send(
@@ -71,7 +75,7 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-white font-medium mb-4'>Your Name<span className="text-rose-600	">*</span></span>
             <input
               type="text"
               name='name'
@@ -82,7 +86,7 @@ const Contact = () => {
           </label>
 
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Email</span>
+            <span className='text-white font-medium mb-4'>Your Email<span className="text-rose-600	">*</span></span>
             <input
               type="email"
               name='email'
@@ -93,7 +97,7 @@ const Contact = () => {
           </label>
 
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+            <span className='text-white font-medium mb-4'>Your Message<span className="text-rose-600	">*</span></span>
             <textarea
               rows={4}
               name='msg'
@@ -104,8 +108,9 @@ const Contact = () => {
           </label>
 
           <button
+            disabled={formState.name === '' || formState.email === '' || formState.msg === ''}
             type='submit'
-            className='bg-cyan-700 hover:bg-cyan-900 py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'
+            className='bg-cyan-700 hover:bg-cyan-900 py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl disabled:bg-slate-600 disabled:cursor-not-allowed'
           >
             {loading ? 'Sending...' : 'Send'}
           </button>
